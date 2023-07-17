@@ -1,0 +1,388 @@
+<!doctype html>
+<html lang="en" class="semi-dark">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- loader-->
+  <link href="assets/css/pace.min.css" rel="stylesheet" />
+  <script src="assets/js/pace.min.js"></script>
+
+  <!--plugins-->
+  <link href="assets/plugins/simplebar/css/simplebar.css" rel="stylesheet" />
+  <link href="assets/plugins/perfect-scrollbar/css/perfect-scrollbar.css" rel="stylesheet" />
+  <link href="assets/plugins/metismenu/css/metisMenu.min.css" rel="stylesheet" />
+
+  <!-- CSS Files -->
+  <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/css/bootstrap-extended.css" rel="stylesheet">
+  <link href="assets/css/style.css" rel="stylesheet">
+  <link href="assets/css/icons.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+
+  <!--Theme Styles-->
+  <link href="assets/css/dark-theme.css" rel="stylesheet" />
+  <link href="assets/css/semi-dark.css" rel="stylesheet" />
+  <link href="assets/css/header-colors.css" rel="stylesheet" />
+
+  <title>Sistema-Energy</title>
+</head>
+
+<body>
+
+
+  <!--start wrapper-->
+  <div class="wrapper">
+
+    <!--start sidebar -->
+    <aside class="sidebar-wrapper" data-simplebar="true">
+      <div class="sidebar-header">
+        <div>
+          <img src="assets/images/logo-icon-2.png" class="logo-icon" alt="logo icon">
+        </div>
+        <div>
+          <h4 class="logo-text">Retos Energeticos</h4>
+        </div>
+        <div class="toggle-icon ms-auto">
+          <ion-icon name="menu-sharp"></ion-icon>
+        </div>
+      </div>
+      <!--navigation-->
+      <ul class="metismenu" id="menu">
+       
+        
+        <li class="menu-label">UI Elements</li>
+        <li>
+          <a href="javascript:;" class="has-arrow">
+            <div class="parent-icon">
+              <ion-icon name="briefcase-sharp"></ion-icon>
+            </div>
+            <div class="menu-title">Herramientas</div>
+          </a>
+          
+        </li>
+
+        
+        <li>
+          <a class="has-arrow" href="javascript:;">
+            <div class="parent-icon">
+              <ion-icon name="server-sharp"></ion-icon>
+            </div>
+            <div class="menu-title">Compras</div>
+          </a>
+          <ul>
+            <li> <a href="table-basic-table.html">
+                <ion-icon name="ellipse-outline"></ion-icon>Orden de compra
+              </a>
+            </li>
+            <li> <a href="table-advance-tables.html">
+                <ion-icon name="ellipse-outline"></ion-icon>Solicitud de compra
+              </a>
+            </li>
+            
+          </ul>
+        </li>
+        <li class="menu-label">Paginas</li>
+
+        </li>
+        <li>
+          <a class="has-arrow" href="javascript:;">
+            <div class="parent-icon">
+              <ion-icon name="map-sharp"></ion-icon>
+            </div>
+            <div class="menu-title">------</div>
+          </a>
+          <ul>
+            <li> <a href="map-google-maps.html">
+                <ion-icon name="ellipse-outline"></ion-icon>-----
+              </a>
+            </li>
+            <li> <a href="map-vector-maps.html">
+                <ion-icon name="ellipse-outline"></ion-icon>-----
+              </a>
+            </li>
+          </ul>
+        </li>
+      
+      </ul>
+      <!--end navigation-->
+    </aside>
+    <!--end sidebar -->
+
+    <!--start top header-->
+    <header class="top-header">
+      <nav class="navbar navbar-expand gap-3">
+        <div class="mobile-menu-button">
+          <ion-icon name="menu-sharp"></ion-icon>
+        </div>
+        <form class="searchbar">
+          <!-- <div class="position-absolute top-50 translate-middle-y search-icon ms-3">
+            <ion-icon name="search-sharp"></ion-icon>
+          </div> -->
+          <!-- <input class="form-control" type="text" placeholder="Search for anything"> -->
+          <div class="position-absolute top-50 translate-middle-y search-close-icon">
+            <ion-icon name="close-sharp"></ion-icon>
+          </div>
+        </form>
+        <div class="top-navbar-right ms-auto">
+
+          <ul class="navbar-nav align-items-center">
+            <!-- <li class="nav-item mobile-search-button">
+              <a class="nav-link" href="javascript:;">
+                <div class="">
+                  <ion-icon name="search-sharp"></ion-icon>
+                </div>
+              </a>
+            </li> -->
+            
+            <li class="nav-item dropdown dropdown-large">
+              <a class="nav-link dropdown-toggle dropdown-toggle-nocaret" href="javascript:;" data-bs-toggle="dropdown">
+                <div class="position-relative">
+                  <!-- <span class="notify-badge">8</span> -->
+                  <ion-icon name="notifications-sharp"></ion-icon>
+                </div>
+              </a>
+              <div class="dropdown-menu dropdown-menu-end">
+                <a href="javascript:;">
+                  <div class="msg-header">
+                    <p class="msg-header-title">Notificationes</p>
+                    <!-- <p class="msg-header-clear ms-auto">Marks all as read</p> -->
+                  </div>
+                </a>
+                <div class="header-notifications-list">
+                  <a class="dropdown-item" href="javascript:;">
+                    <div class="d-flex align-items-center">
+                      <div class="notify text-primary">
+                        <ion-icon name="cart-outline"></ion-icon>
+                      </div>
+                      <div class="flex-grow-1">
+                        <h6 class="msg-name">----</h6>
+                        <p class="msg-info">----</p>
+                      </div>
+                    </div>
+                  </a>
+                  
+                 
+                 
+                </div>
+                
+              </div>
+            </li>
+            <li class="nav-item dropdown dropdown-user-setting">
+              <a class="nav-link dropdown-toggle dropdown-toggle-nocaret" href="javascript:;" data-bs-toggle="dropdown">
+                <div class="user-setting">
+                  <img src="assets/images/avatars" class="user-img" alt="">
+                </div>
+              </a>
+              <ul class="dropdown-menu dropdown-menu-end">
+                <li>
+                  <a class="dropdown-item" href="javascript:;">
+                    <div class="d-flex flex-row align-items-center gap-2">
+                      <img src="assets/images/avatars" alt="" class="rounded-circle" width="54" height="54">
+                      <div class="">
+                        <h6 class="mb-0 dropdown-user-name">Usuario</h6>
+                        <small class="mb-0 dropdown-user-designation text-secondary">---</small>
+                      </div>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <hr class="dropdown-divider">
+                </li>
+                <li>
+                  <a class="dropdown-item" href="javascript:;">
+                    <div class="d-flex align-items-center">
+                      <div class="">
+                        <ion-icon name="person-outline"></ion-icon>
+                      </div>
+                      <div class="ms-3"><span>Perfil</span></div>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <hr class="dropdown-divider">
+                </li>
+                <li>
+                  <a class="dropdown-item" href="javascript:;">
+                    <div class="d-flex align-items-center">
+                      <div class="">
+                        <ion-icon name="log-out-outline"></ion-icon>
+                      </div>
+                      <div class="ms-3"><span>Cerrar sesión </span></div>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+            </li>
+
+          </ul>
+
+        </div>
+      </nav>
+    </header>
+    <!--end top header-->
+
+
+    <!-- start page content wrapper-->
+    <div class="page-content-wrapper">
+      <!-- start page content-->
+      <div class="page-content">
+
+        <!--start breadcrumb-->
+        <div class="page-breadcrumb d-none d-sm-flex align-items-center mb-3">
+          <div class="breadcrumb-title pe-3">Sistema</div>
+          
+          <div class="ms-auto">
+           
+          </div>
+        </div>
+        <!--end breadcrumb-->
+
+
+        <div class="row row-cols-1 row-cols-lg-2 row-cols-xxl-4">
+          <div class="col">
+            <div class="card radius-10">
+              <div class="card-body">
+                <div class="d-flex align-items-center gap-2">
+                  <div class="fs-5">
+                    <ion-icon name="person-add-outline"></ion-icon>
+                  </div>
+                  <div>
+                    <p class="mb-0">-------</p>
+                  </div>
+                  <div class="fs-5 ms-auto">
+                    <ion-icon name="ellipsis-horizontal-sharp"></ion-icon>
+                  </div>
+                </div>
+                <div class="d-flex align-items-center mt-3">
+                  <div>
+                    <h5 class="mb-0">---</h5>
+                  </div>
+                 
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card radius-10">
+              <div class="card-body">
+                <div class="d-flex align-items-center gap-2">
+                  <div class="fs-5">
+                    <ion-icon name="heart-outline"></ion-icon>
+                  </div>
+                  <div>
+                    <p class="mb-0">-------</p>
+                  </div>
+                  <div class="fs-5 ms-auto">
+                    <ion-icon name="ellipsis-horizontal-sharp"></ion-icon>
+                  </div>
+                </div>
+                <div class="d-flex align-items-center mt-3">
+                  <div>
+                    <h5 class="mb-0">----</h5>
+                  </div>
+                
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card radius-10">
+              <div class="card-body">
+                <div class="d-flex align-items-center gap-2">
+                  <div class="fs-5">
+                    <ion-icon name="chatbox-outline"></ion-icon>
+                  </div>
+                  <div>
+                    <p class="mb-0">-----</p>
+                  </div>
+                  <div class="fs-5 ms-auto">
+                    <ion-icon name="ellipsis-horizontal-sharp"></ion-icon>
+                  </div>
+                </div>
+                <div class="d-flex align-items-center mt-3">
+                  <div>
+                    <h5 class="mb-0">----</h5>
+                  </div>
+                 
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card radius-10">
+              <div class="card-body">
+                <div class="d-flex align-items-center gap-2">
+                  <div class="fs-5">
+                    <ion-icon name="mail-outline"></ion-icon>
+                  </div>
+                  <div>
+                    <p class="mb-0">------</p>
+                  </div>
+                  <div class="fs-5 ms-auto">
+                    <ion-icon name="ellipsis-horizontal-sharp"></ion-icon>
+                  </div>
+                </div>
+                <div class="d-flex align-items-center mt-3">
+                  <div>
+                    <h5 class="mb-0">1,037</h5>
+                  </div>
+                 
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--end row-->
+
+
+       
+
+
+       
+      </div>
+      <!-- end page content-->
+    </div>
+    <!--end page content wrapper-->
+
+
+   
+
+
+    <!--Start Back To Top Button-->
+    <a href="javaScript:;" class="back-to-top">
+      <ion-icon name="arrow-up-outline"></ion-icon>
+    </a>
+    <!--End Back To Top Button-->
+
+   
+
+
+    <!--start overlay-->
+    <div class="overlay nav-toggle-icon"></div>
+    <!--end overlay-->
+
+  </div>
+  <!--end wrapper-->
+
+
+  <!-- JS Files-->
+  <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/plugins/simplebar/js/simplebar.min.js"></script>
+  <script src="assets/plugins/metismenu/js/metisMenu.min.js"></script>
+  <script src="assets/js/bootstrap.bundle.min.js"></script>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <!--plugins-->
+  <script src="assets/plugins/perfect-scrollbar/js/perfect-scrollbar.js"></script>
+  <script src="assets/plugins/apexcharts-bundle/js/apexcharts.min.js"></script>
+  <script src="assets/plugins/chartjs/chart.min.js"></script>
+  <script src="assets/js/index.js"></script>
+  <!-- Main JS-->
+  <script src="assets/js/main.js"></script>
+
+
+</body>
+
+</html>
