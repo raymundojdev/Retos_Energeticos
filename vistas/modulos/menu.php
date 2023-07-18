@@ -3,10 +3,10 @@
   <div class="sidebar-header" style="
     background-color: #1B4F72;">
     <div>
-      <a href="inicio"><img src="vistas/img/logo-reg.png" class="logo-icon" style="margin-left: -8%;width: 81%; margin-top: 23%;" alt="logo icon"></a>
+      <a href="https://appcompras.grretosenergeticos.com/inicio"><img src="vistas/img/logo-reg.png" class="logo-icon" style="margin-left: -8%;width: 81%; margin-top: 23%;" alt="logo icon"></a>
     </div>
     <div>
-      <a href="inicio">
+      <a href="https://appcompras.grretosenergeticos.com/inicio">
         <h4 class="logo-text" style="font-size: 18px; margin-left: -11%;
     margin-top: 6%;">Retos Energeticos</h4>
       </a>
@@ -30,24 +30,24 @@
             </a>
   
             <ul>             
-              <li> <a href="usuarios">
+              <li> <a href="https://appcompras.grretosenergeticos.com/usuarios">
               <i class="lni lni-users"></i>&nbsp Usuarios
                 </a>
               </li>
-              <li> <a href="clientes">
+              <li> <a href="https://appcompras.grretosenergeticos.com/clientes">
               <i class="fadeIn animated bx bx-briefcase-alt-2"></i>&nbsp Clientes
                 </a>
               </li>
               
-              <li> <a href="manager">
+              <li> <a href="https://appcompras.grretosenergeticos.com/manager">
               <i class="fadeIn animated bx bx-user-pin"></i></ion-icon>&nbsp Manager
                     </a>
               </li>
-              <li> <a href="orden-compraD">
+              <li> <a href="https://appcompras.grretosenergeticos.com/orden-compraD">
               <i class="fadeIn animated bx bx-user-pin"></i></ion-icon>&nbsp Director
                     </a>
               </li>
-              <li> <a href="solicitud-compraCO">
+              <li> <a href="https://appcompras.grretosenergeticos.com/solicitud-compraCO">
               <i class="fadeIn animated bx bx-user-pin"></i></ion-icon>&nbsp Compras
                     </a>
               </li>
@@ -58,7 +58,7 @@
         $_SESSION["rol"] == "Administrador" ||  $_SESSION["rol"] == "Compras"
         ||  $_SESSION["rol"] == "Manager" ||  $_SESSION["rol"] == "Director"
       ) {
-        echo '<li> <a href="proveedores">
+        echo '<li> <a href="https://appcompras.grretosenergeticos.com/proveedores">
                         <i class="lni lni-delivery"></i>&nbsp Proveedores
                           </a>
                         </li>
@@ -86,7 +86,7 @@
                   || $_SESSION["rol"] == "Compras"  
                 ) {
                   echo'
-                  <li> <a href="solicitud-compras">
+                  <li> <a href="https://appcompras.grretosenergeticos.com/solicitud-compras">
                   <i class="fadeIn animated bx bx-receipt"></i>&nbsp Solicitud de compra
                     </a>
                   </li>
@@ -97,7 +97,7 @@
       if (
         $_SESSION["rol"] == "Administrador" || $_SESSION["rol"] == "Director" 
       ) {
-        echo '<li> <a href="orden-compraD">
+        echo '<li> <a href="https://appcompras.grretosenergeticos.com/orden-compraD">
                            <i class="fadeIn animated bx bx-clipboard"></i>&nbsp Orden de compra
                              </a>
                            </li>
@@ -118,7 +118,7 @@
                   <div class="menu-title">Compras</div>
                 </a>
                 <ul>
-                  <li> <a href="manager">
+                  <li> <a href="https://appcompras.grretosenergeticos.com/manager">
                   <i class="fadeIn animated bx bx-receipt"></i>&nbsp Solicitud de compra
                     </a>
                   </li>
