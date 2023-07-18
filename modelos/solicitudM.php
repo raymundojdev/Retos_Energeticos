@@ -74,7 +74,7 @@ class SolicitudM extends ConexionBD
         if ($item != null) {
 
 
-            $pdo = ConexionBD::cBD()->prepare("SELECT * FROM vista_solicitud_general WHERE $item = :$item AND status = 1 ");
+            $pdo = ConexionBD::cBD()->prepare("SELECT * FROM $tablaBD WHERE $item = :$item AND status = 1 ");
 
             $pdo->bindParam(":" . $item, $valor, PDO::PARAM_STR);
 
@@ -84,7 +84,7 @@ class SolicitudM extends ConexionBD
         } else {
 
 
-            $pdo = ConexionBD::cBD()->prepare("SELECT * FROM vista_solicitud_general WHERE status = 1  AND firma_superv = $idsuario");
+            $pdo = ConexionBD::cBD()->prepare("SELECT * FROM $tablaBD WHERE status = 1  AND firma_superv = $idsuario");
 
 
 
@@ -295,7 +295,7 @@ class SolicitudM extends ConexionBD
         proyecto_soli,seguro_inclu,oferta_suminis,condicion_especial,ref_suministrador,
         descripcion,cantidad,precio_unitario,tasa,total,subtotal_soli,taxes,
         pago_envio_soli,otros_soli,total_soli,moneda,cuadro_msoli,ofertaprove_soli,
-        especificacion_tecsoli,status, estado,id_tipo_proceso,
+        especificacion_tecsoli,comentarios,status, estado,id_tipo_proceso,
         id_usuario) 
 
          
@@ -306,7 +306,7 @@ class SolicitudM extends ConexionBD
         :proyecto_soli,:seguro_inclu,:oferta_suminis,:condicion_especial,:ref_suministrador,
         :descripcion,:cantidad,:precio_unitario,:tasa,:total,:subtotal_soli,:taxes,
         :pago_envio_soli,:otros_soli,:total_soli,:moneda,:cuadro_msoli,:ofertaprove_soli,
-        :especificacion_tecsoli,1, 5,2,$idsuario)");
+        :especificacion_tecsoli,1,1, 5,2,$idsuario)");
 
         $pdo->bindParam(":id_provedor", $datosC["id_provedor"], PDO::PARAM_INT);
         $pdo->bindParam(":codigo", $datosC["codigo"], PDO::PARAM_STR);
@@ -508,7 +508,7 @@ class SolicitudM extends ConexionBD
     /* --------------------------------------------------------------------------*/
     /*                             aprobar datos solicitud                    */
     /* --------------------------------------------------------------------------*/
-     static public function ActualizarARaprobarSolicitudM($tablaBD, $datosC)
+     static public function ActualizarARaprobarSolicitudM($tablaBD, $datosC, $comentario, $comentario2)
      {
 
           if ($comentario != null) {
@@ -542,7 +542,7 @@ class SolicitudM extends ConexionBD
     /* --------------------------------------------------------------------------*/
     /*                            En espera datos solicitud director           */
     /* --------------------------------------------------------------------------*/
-    static public function ActualizarSolicitudDM($tablaBD, $datosC)
+    static public function ActualizarSolicitudDM($tablaBD, $datosC, $comentario)
     {
 
         if (isset($comentario) && !empty($comentario)) {

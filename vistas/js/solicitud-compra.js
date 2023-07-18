@@ -546,7 +546,7 @@ $(".TB").on("click", ".btnImprimirSolicitud", function() {
 
 
 /* -------------------------------------------------------------------------- */
-/*                       FUNCION LETRAS MAYUSCULAS INPUT                      */
+/*                       Eliminar solicitud compras                      */
 /* -------------------------------------------------------------------------- */
 $(".TB").on("click", ".BorrarM", function(){
 
@@ -567,6 +567,81 @@ $(".TB").on("click", ".BorrarM", function(){
       }
     })
         
-      
+    
+})
 
+
+/* -------------------------------------------------------------------------- */
+/*                      ELIMINAR SOLICITUD COMPRAS                            */
+/* -------------------------------------------------------------------------- */
+$(".TB").on("click", ".BorrarCO", function(){
+
+  var COid = $(this).attr("COid");
+
+  Swal.fire({
+      title: '¿Estas realmente seguro?',
+      text: "No podras revertir este proceso!",
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonColor: '#3085d6',
+      cancelButtonColor: '#d33',
+      confirmButtonText: 'Sí!'
+    }).then(function(result) {
+      if (result.value) {
+          window.location = "index.php?url=solicitud-compraCO&COid="+COid;
+      
+      }
+    })
+        
+})
+
+
+
+/* -------------------------------------------------------------------------- */
+/*                      ELIMINAR SOLICITUD DIRECTOR                            */
+/* -------------------------------------------------------------------------- */
+$(".TB").on("click", ".BorrarD", function(){
+
+  var Did = $(this).attr("Did");
+
+  Swal.fire({
+      title: '¿Estas realmente seguro?',
+      text: "No podras revertir este proceso!",
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonColor: '#3085d6',
+      cancelButtonColor: '#d33',
+      confirmButtonText: 'Sí!'
+    }).then(function(result) {
+      if (result.value) { 
+          window.location = "index.php?url=orden-compraD&Did="+Did;
+      
+      }
+    })
+        
+})
+
+
+/* -------------------------------------------------------------------------- */
+/*                      ELIMINAR SOLICITUD MANAGER                            */
+/* -------------------------------------------------------------------------- */
+$(".TB").on("click", ".BorrarMA", function(){
+
+  var MAid = $(this).attr("MAid");
+
+  Swal.fire({
+      title: '¿Estas realmente seguro?',
+      text: "No podras revertir este proceso!",
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonColor: '#3085d6',
+      cancelButtonColor: '#d33',
+      confirmButtonText: 'Sí!'
+    }).then(function(result) {
+      if (result.value) {
+          window.location = "index.php?url=manager&MAid="+MAid;
+      
+      }
+    })
+        
 })

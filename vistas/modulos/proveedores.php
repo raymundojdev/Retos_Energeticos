@@ -84,7 +84,7 @@
             <div class="card">
                 <div class="card-body">
                     <div class="table-responsive">
-                        <table id="example2" class="table table-striped table-bordered TB">
+                        <table id="example" class="table table-striped table-bordered TB">
                             <thead>
                                 <tr>
                                     <th>Nombre</th>
@@ -109,7 +109,7 @@
                                     echo '
                         
                                     <tr>
-                                        <td>' . $value["nombre"] . '</td>
+                                        <td>' . $value["nombre_prov"] . '</td>
                                         <td>' . $value["rfc"] . '</td>
                                         <td>' . $value["direccion"] . ' ?></td>
                                         <td>' . $value["telefono"] . '</td>

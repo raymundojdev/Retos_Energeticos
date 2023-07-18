@@ -1373,7 +1373,7 @@ $html = '
 <br><br><br>
 ';
 
-$content = '
+$content .= '
 <p style="text-align: justify; color:black;">Si el suministrador, o quienes actúen en su nombre y representación, infringe lo dispuesto 
 en este párrafo, la EMPRESA COMPRADORA podrá (i) resolver todos los Contratos con el 
 suministrador y/o las sociedades de su grupo y reclamar al suministrador cualesquiera 

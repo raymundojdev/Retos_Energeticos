@@ -131,8 +131,8 @@
 
                                         <td>
                                             <div class="btn-group">
-                                           <?php echo' <button class="btn btn-warning btnVistaSolicitud" data-bs-toggle="modal" data-bs-target="#solicitudCom22"  idSolicitud="' . $value["id"] . '"><i class="fadeIn animated bx bx-edit-alt"></i></button>' ?>
-                                                <button class="btn btn-danger " title="Eliminar solicitud"><i class="fadeIn animated bx bx-trash-alt"></i></button>
+                                           <?php echo' <button class="btn btn-warning btnVistaSolicitud" data-bs-toggle="modal" data-bs-target="#solicitudCom22"  idSolicitud="' . $value["id"] . '"><i class="fadeIn animated bx bx-edit-alt"></i></button>
+                                           <button class="btn btn-danger BorrarM" Mid="' . $value["id"] . '"><i class="fadeIn animated bx bx-trash-alt"></i></button>' ?>
                                             <?php  echo ' <button class="btn btn-secondary btnImprimirSolicitud" idSolicitudFac="'.$value['id'].'" title="PDF"><i class="bi bi-file-earmark-pdf"></i></button>'?>
                                             </div>
                                         </td>
@@ -2697,9 +2697,6 @@
 
                     <div class="col-12">
 
-
-
-
                         <br><br>
                         <label for="rechazarCheckbox">Rechazar solicitud</label>
                         <input type="checkbox" id="rechazarCheckbox"><br>
@@ -2709,8 +2706,6 @@
             </div>
 
             <!-- <div class="btn-group btn-group-toggle" data-toggle="buttons">
-
-
 
                 <button id="Brechazar" class="btn btn-danger btn-md btn-block " style="display: none;" type="submit">Rechazar solicitud</button>
 
@@ -2737,8 +2732,9 @@
 <!--end wrapper-->
 
 <?php
-$borrarU = new UsuariosC();
-$borrarU->BorrarUsuariosC();
-
+$borrarS = new SolicitudC();
+$borrarS->EliminarSolicitudC();
 ?>
+
+
 

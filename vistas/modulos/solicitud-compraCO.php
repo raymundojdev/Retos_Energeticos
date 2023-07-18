@@ -97,15 +97,16 @@
 
                                 $vistaSolicitud = SolicitudC::VerSolicitudC($item2, $valor2);
 
-                                $verS = SolicitudC::VistaSolicitudCOC($item, $valor);
+                                $verS = SolicitudC::VerSolicitudC($item, $valor);
                                 ?>
                                 <?php
                                 /* -------------------------------------------------------------------------- */
                                 /*abrimos un foreach con la variable respuesta traiga un echo con lo que tenemos
                                   como registros en la tabla                                                  */
                                 /* -------------------------------------------------------------------------- */
-
+                                $codigo = 870;
                                 foreach ($verS as $key => $value) {
+                                    $codigo+=1; 
                                     echo '
                                     </tr>';
                                 ?>
@@ -127,7 +128,7 @@
                                             echo '<td>
                                             <div class="btn-group">
                                                 <button class="btn btn-warning btnVistaSolicitud" data-bs-toggle="modal" data-bs-target="#solicitudCom22"  idSolicitud="' . $value["id"] . '"><i class="fadeIn animated bx bx-edit-alt"></i></button>
-                                                <button class="btn btn-danger " title="Eliminar solicitud"><i class="fadeIn animated bx bx-trash-alt"></i></button>';
+                                                <button class="btn btn-danger BorrarCO" COid="' . $value["id"] . '"><i class="fadeIn animated bx bx-trash-alt"></i></button>';
                                                 if($value["tipo_proceso"] == "Solicitud de compra"){
                                                     echo '<button class="btn btn-secondary btnImprimirSolicitud" idSolicitudFac="'.$value['id'].'" title="PDF"><i class="bi bi-file-earmark-pdf"></i></button>
                                                     </div>';
@@ -139,7 +140,7 @@
 
                                             ?>
                                         </td>
-
+                                        <td><?php echo $value["codigo"] ?></td>
                                         <td><?php echo $value["fecha"] ?></td>
                                         <td><?php echo $value["solicitante_lentrega"] ?></td>
                                         <td><?php echo $value["nombre_prov"] ?></td>
@@ -2724,8 +2725,9 @@
         </div>
     </div>
 </div>
-<?php
-$borrarU = new UsuariosC();
-$borrarU->BorrarUsuariosC();
 
+
+<?php
+$borrarCO = new SolicitudC();
+$borrarCO->EliminarSolicitudCO();
 ?>

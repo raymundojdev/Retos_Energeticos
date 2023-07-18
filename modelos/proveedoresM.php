@@ -16,7 +16,7 @@ class ProveedoresM extends ConexionBD{
         /*                          crearemos la variable pdo                         */
         /* -------------------------------------------------------------------------- */
 
-        $pdo = ConexionBD::cBD()->prepare("SELECT id,nombre,rfc,direccion,telefono,atn,email FROM $tablaBD WHERE  estado = 1");
+        $pdo = ConexionBD::cBD()->prepare("SELECT id,nombre_prov,rfc,direccion,telefono,atn,email FROM $tablaBD WHERE  estado = 1");
         /* -------------------------------------------------------------------------- */
         /*           variable pdo para que se nos ejecute la consulta SELECT          */
         /* -------------------------------------------------------------------------- */

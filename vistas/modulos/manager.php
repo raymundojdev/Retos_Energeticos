@@ -73,6 +73,7 @@
                                 <tr>
                                     <th>Estado</th>
                                     <th>Acciones</th>
+                                    <th>codigo</th>
                                     <th>Fecha</th>
                                     <th>Solicitante</th>
                                     <th>Suministrador</th>
@@ -134,12 +135,12 @@
                                             <div class="btn-group">
                                                 <button class="btn btn-warning btnVistaSolicitud" data-bs-toggle="modal" data-bs-target="#solicitudCom22"  idSolicitud="' . $value["id"] . '"><i class="fadeIn animated bx bx-edit-alt"></i></button>
                                                 <button class="btn btn-secondary btnImprimirFactura" idSolicitudFac="'.$value['id'].'" title="PDF"><i class="bi bi-file-earmark-pdf"></i></button>
-                                                <button class="btn btn-danger BorrarM" Mid="' . $value["id"] . '"><i class="fadeIn animated bx bx-trash-alt"></i></button>
+                                                <button class="btn btn-danger BorrarMA" MAid="' . $value["id"] . '"><i class="fadeIn animated bx bx-trash-alt"></i></button>
                                             </div>';
 
                                             ?>
                                         </td>
-
+                                        <td><?php echo $value["codigo"] ?></td>    
                                         <td><?php echo $value["fecha"] ?></td>
                                         <td><?php echo $value["solicitante_lentrega"] ?></td>
                                         <td><?php echo $value["nombre_prov"] ?></td>
@@ -2708,7 +2709,7 @@
             <?php
 
             $actualizarSolicitarAR = new SolicitudC();
-            $actualizarSolicitarAR->EliminarSolicitudC();
+            $actualizarSolicitarAR->ActualizarARSolicitudC();
 
             ?>
 
@@ -2722,6 +2723,6 @@
 
 <?php
 $borrarS = new SolicitudC();
-$borrarS->EliminarSolicitudC();
+$borrarS->EliminarSolicitudCMA();
 ?>
 
